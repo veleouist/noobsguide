@@ -356,7 +356,7 @@ footer p {
 }
 
 .gif-corner img {
-    width: 150px; /* Adjust the size of the GIF */
+    width: 100x; /* Adjust the size of the GIF */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; 
     border: none
