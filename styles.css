@@ -6,7 +6,7 @@ body {
     background-color: #504e4e; 
     color: #ffeb3b; 
     line-height: 1.6;
-    background-image: url('https://i.ibb.co/NnN1Mtx1/small-rob-arm1.png'); 
+    background-image: url('https://i.ibb.co/rGWqYJr2/rob-arm-1.png'); 
     background-size: 40%; 
     background-position: left; 
     background-attachment: fixed; 
@@ -127,11 +127,12 @@ nav ul li a.active {
 }
 
 .gallery-item {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px; 
+    width: 100%; 
 }
 
 .gallery img, .gallery video {
@@ -158,9 +159,12 @@ nav ul li a.active {
 }
 
 .caption {
-    margin-top: 10px;
-    color: #ffeb3b; 
+    margin-top: 15px;
+    color: #ffeb3b;
     font-size: 1rem;
+    text-align: center; 
+    width: 100%; 
+    display: block; 
 }
 
 /*lightbox*/
@@ -315,14 +319,14 @@ footer p {
 
 /* Style for video containers */
 .video-container {
-    width: 100%; /* Adjust width as needed */
-    max-width: 600px; /* Set a max-width for the video */
-    margin: 0 auto; /* Center the video */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     position: relative;
-    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
-    border: 2px solid #ffeb3b; /* Yellow border */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure the border-radius clips the iframe */
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    border: 2px solid #ffeb3b;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .video-container iframe {
@@ -331,7 +335,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Remove default iframe border */
+    border: none;
 }
 
 /* Ensure the gallery items align properly */
@@ -341,4 +345,20 @@ footer p {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px; /* Add spacing between items */
+}
+
+
+.gif-corner {
+    position: fixed; /* Fix the GIF to the viewport */
+    bottom: 0px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.gif-corner img {
+    width: 150px; /* Adjust the size of the GIF */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; 
+    border: none
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
