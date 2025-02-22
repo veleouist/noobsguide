@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Noob’s Guide to a Robotic Arm - Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>THE NOOB'S GUIDE TO A ROBOTIC ARM</h1>
+        <p class="subtitle">AN ONLINE DOCUMENTATION JOURNAL OF THE DEVELOPMET OF A ROBOTIC ARM</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html" class="active">Project</a></li>
+                
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>PROJECT HARDWARE
+
+        </h2>
+
+        <!-- Electronics -->
+        <div class="category">
+            <h3>Electronic Components</h3>
+            <p>THIS SECTION DETAILS THE ELECTRONIC COMPONENTS USED IN THE PROJECT, THEIR PURPOSE, AND SPECIFICATIONS.</p>
+
+            <!-- Arduino  -->
+            <div class="component">
+                <img src="https://i.ibb.co/nqfKYRhS/arduino-mega.jpg" alt="Arduino Mega 2560" class="component-img">
+                <h4>Arduino Mega 2560</h4>
+                <div class="subcategory">
+                    <p><strong>What is it?</strong> The Arduino Mega 2560 is a microcontroller board based on the ATmega2560. 
+                        <br>
+                        It has 54 digital input/output pins, 16 analog inputs, and ample memory for complex projects.</p>
+                    <p><strong>Purpose:</strong> Acts as the brain of the robotic arm, controlling all connected components such as servos, motors, and sensors.</p>
+                    <p><strong>Specifications:</strong></p>
+                    
+                        <li>Microcontroller: ATmega2560</li>
+                        <li>Operating Voltage: 5V</li>
+                        <li>Input Voltage: 7-12V (recommended)</li>
+                        <li>Flash Memory: 256 KB</li>
+                        <li>SRAM: 8 KB</li>
+                        <li>EEPROM: 4 KB</li>
+                    
+                </div>
+            </div>
+
+            <!-- bt-->
+            <div class="component">
+                <img src="https://i.ibb.co/js36dqz/hc05-bluetooth.jpg" alt="hc05-bluetooth" class="component-img">
+                <h4>HC-05 Bluetooth Module</h4>
+                <div class="subcategory">
+                    <p><strong>What is it?</strong> The HC-05 is a Bluetooth module that enables wireless communication between the Arduino and other devices, such as a smartphone or computer.</p>
+                    <p><strong>Purpose:</strong> Allows remote control of the robotic arm via Bluetooth, enabling wireless operation and data exchange.</p>
+                    <p><strong>Specifications:</strong></p>
+                    
+                        <li>Bluetooth Version: 2.0 + EDR</li>
+                        <li>Operating Voltage: 3.3V - 5V</li>
+                        <li>Communication Range: Up to 10 meters</li>
+                        <li>Interface: UART (Serial Communication)</li>
+                    
+                </div>
+            </div>
+
+            <!-- servo-->
+            <div class="component">
+                <img src="https://i.ibb.co/QF1v6dym/mg996r-servo.jpg" alt="mg996r-servo" class="component-img">
+                <h4>MG996R Servo Motors (x5)</h4>
+                <div class="subcategory">
+                    <p><strong>What is it?</strong> The MG996R is a high-torque servo motor commonly used in robotics for precise angular control.</p>
+                    <p><strong>Purpose:</strong> Used to control the joints of the robotic arm, providing accurate movement and positioning.</p>
+                    <p><strong>Specifications:</strong></p>
+                    
+                        <li>Operating Voltage: 4.8V - 7.2V</li>
+                        <li>Stall Torque: 10 kg/cm (at 4.8V), 12 kg/cm (at 6.6V)</li>
+                        <li>Speed: 0.17s/60° (at 4.8V), 0.14s/60° (at 6.6V)</li>
+                        <li>Rotation Angle: 180°</li>
+                    
+                </div>
+            </div>
+
+            <!-- nema17-->
+            <div class="component">
+                <img src="https://i.ibb.co/ymwWRzMW/nema17-stepper1.jpg" alt="nema17_stepper1" class="component-img">
+                <h4>NEMA 17 Stepper Motor (34mm Height)</h4>
+                <div class="subcategory">
+                    <p><strong>What is it?</strong> The NEMA 17 is a stepper motor commonly used in precision motion control applications.</p>
+                    <p><strong>Purpose:</strong> Provides precise rotational control for specific parts of the robotic arm, such as the base or gripper.</p>
+                    <p><strong>Specifications:</strong></p>
+                    
+                        <li>Step Angle: 1.8° (200 steps per revolution)</li>
+                        <li>Holding Torque: 40-50 Ncm</li>
+                        <li>Operating Voltage: 12V - 24V</li>
+                        <li>Current: 1.2A - 1.7A per phase</li>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- info-->
+        <div class="category">
+            <h3>Additional Information</h3>
+            <br>
+            <h4>3D Printing Details</h4>
+            
+                <li><strong>Filament Type:</strong> PLA (Polylactic Acid) and PETG (Polyethylene Terephthalate Glycol)</li>
+                <li><strong>Filament Color:</strong> White</li>
+                <li><strong>Printer Model:</strong> FlashForge AD5M</li>
+                <li><strong>Layer Height:</strong> 0.2mm</li>
+                <li><strong>Infill Percentage:</strong> 20%</li>
+                <li><strong>Supports:</strong> Used for overhangs; removed with TLC after printing.</li>
+                <li><strong>Slicer:</strong> Orca-FlashForge</li>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - George Velentzas</p>
+    </footer>
+</body>
