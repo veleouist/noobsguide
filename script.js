@@ -22,3 +22,5 @@ lightbox.addEventListener('click', (e) => {
     if (e.target !== lightboxImg) {
         lightbox.style.display = 'none';
     }
+
+    
