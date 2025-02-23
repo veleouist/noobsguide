@@ -39,6 +39,37 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hamburger Menu */
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show when active */
+    }
+}
+
+.nav-menu {
+    display: flex; /* Show by default on desktop */
+}
+
 /* Main Content */
 main {
     background-image: url('images/gripper_1.jpg');
@@ -51,7 +82,7 @@ main {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px; /* Adds spacing between columns and text-side */
+    gap: 20px;
 }
 
 .left-column {
@@ -63,41 +94,40 @@ main {
     font-size: 42px;
     text-transform: uppercase;
     margin: 0;
-    color: #000000; /* Ensure the text color is white */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .left-column h1:hover {
-    transform: scale(1.05); /* Slightly enlarge the text */
+    transform: scale(1.05);
 }
 
 .left-column p {
     font-size: 34px;
     margin: 10px 0 0;
-    color: #000000; /* Ensure the text color is white */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .left-column p:hover {
-    transform: scale(1.05); /* Slightly enlarge the text */
+    transform: scale(1.05);
 }
 
 .right-column {
     flex: 1;
-    /* Add styles for right column content if needed */
 }
 
 .text-side {
     flex: 1;
     max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease;
 }
 
 .text-side:hover {
-    background-color: rgba(255, 255, 255, 0.95); /* Less transparent on hover */
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .text-side p {
@@ -105,11 +135,6 @@ main {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
-
-
-
-
 
 .text-side strong {
     font-weight: bold;
@@ -135,72 +160,68 @@ footer {
 }
 
 .social-icons a {
-    color: #fff; /* Icon color */
+    color: #fff;
     text-decoration: none;
-    margin: 0 10px; /* Spacing between icons */
-    font-size: 24px; /* Icon size */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #0077b5; /* Change color on hover (e.g., LinkedIn blue) */
-    transform: translateY(-3px); /* Slightly lift the icon */
+    color: #0077b5;
+    transform: translateY(-3px);
 }
 
-/* Optional: Different colors for each icon */
 .social-icons a:hover.fa-facebook-f {
-    color: #1877f2; /* Facebook blue */
+    color: #1877f2;
 }
 
 .social-icons a:hover.fa-twitter {
-    color: #1da1f2; /* Twitter blue */
+    color: #1da1f2;
 }
 
 .social-icons a:hover.fa-instagram {
-    color: #e4405f; /* Instagram pink */
+    color: #e4405f;
 }
 
 .social-icons a:hover.fa-linkedin-in {
-    color: #0077b5; /* LinkedIn blue */
+    color: #0077b5;
 }
 
 .social-icons a:hover.fa-github {
-    color: #6e5494; /* GitHub purple */
+    color: #6e5494;
 }
 
 /* Project Page Styles */
-/* Project Page Title Hover Effect */
-/* Project Page Title Alignment */
+/* Project Page Styles */
 .project-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
-    text-align: center; /* Center all text inside .project-content */
+    text-align: center;
 }
 
 .project-content h1 {
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    text-align: center; /* Explicitly center the h1 */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .project-content h1:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .project-content .subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    text-align: center; /* Explicitly center the subtitle */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .project-content .subtitle:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .hardware-section {
@@ -212,6 +233,7 @@ footer {
 
 .hardware-item {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
     gap: 20px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -225,13 +247,15 @@ footer {
 }
 
 .hardware-img {
-    width: 150px;
+    width: 100%; /* Make images responsive */
+    max-width: 300px; /* Limit image size */
     height: auto;
     border-radius: 8px;
 }
 
 .hardware-details {
     text-align: left;
+    width: 100%; /* Ensure text takes full width */
 }
 
 .hardware-details h3 {
@@ -262,13 +286,13 @@ footer {
     text-align: left;
 }
 
-.additional-info h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.additional-info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.additional-info h4 {
-    font-size: 20px;
+.additional-info h3 {
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
@@ -294,23 +318,23 @@ footer {
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .gallery-content h1:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .gallery-content .subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .gallery-content .subtitle:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .gallery {
@@ -345,12 +369,12 @@ footer {
 /* Video Container Styles */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    margin-bottom: 20px; /* Add space below the video */
+    margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px; /* Match the border radius of other gallery items */
+    border-radius: 8px;
 }
 
 .video-container iframe {
@@ -359,18 +383,17 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Remove iframe border */
+    border: none;
 }
 
 .video-container .caption {
     font-size: 16px;
     margin-top: 10px;
-    text-align: bottom;
-    position: relative; /* Ensure the caption is below the video */
-    display: block; /* Make the caption a block element */
-    padding: 10px 0; /* Add padding to the caption for better spacing */
+    text-align: center;
+    position: relative;
+    display: block;
+    padding: 10px 0;
 }
-
 
 /* About Page Styles */
 .about-content {
@@ -384,23 +407,23 @@ footer {
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .about-content h1:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .about-content .subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .about-content .subtitle:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .about-section {
@@ -418,7 +441,7 @@ footer {
 .about-section h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #000; /* Ensure the text color is black */
+    color: #000;
 }
 
 .about-section .content {
@@ -432,7 +455,7 @@ footer {
 }
 
 .about-section .content a {
-    color: #0077b5; /* Link color */
+    color: #0077b5;
     text-decoration: none;
     font-weight: bold;
 }
@@ -453,23 +476,23 @@ footer {
     font-size: 42px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .contact-content h1:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .contact-content .subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: #000; /* Ensure the text color is black */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    color: #000;
+    transition: transform 0.3s ease;
 }
 
 .contact-content .subtitle:hover {
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    transform: scale(1.05);
 }
 
 .contact-section {
@@ -504,7 +527,7 @@ footer {
 }
 
 .contact-links a {
-    color: #0077b5; /* Link color */
+    color: #0077b5;
     text-decoration: none;
     font-weight: bold;
 }
@@ -518,11 +541,92 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; /* Ensure the GIF stays on top of other content */
+    z-index: 1000;
 }
 
 .gif-container img {
-    width: 200px; /* Adjust the size of the GIF */
+    width: 200px;
     height: auto;
     border-radius: 8px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    /* Main Content */
+    .main-content, .project-content, .about-content, .contact-content {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .left-column, .text-side, .gallery-content, .about-section, .contact-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-column h1 {
+        font-size: 32px;
+    }
+
+    .left-column p {
+        font-size: 24px;
+    }
+
+    .text-side p {
+        font-size: 14px;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        width: 100%;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+
+    /* GIF Container */
+    .gif-container {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .gif-container img {
+        width: 80px;
+    }
 }
