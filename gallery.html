@@ -1,74 +1,76 @@
-
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Noob’s Guide to a Robotic Arm - Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>The Noob's Guide to a Robotic Arm - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>THE NOOB'S GUIDE TO A ROBOTIC ARM</h1>
-        <p class="subtitle">AN ONLINE DOCUMENTATION JOURNAL OF THE DEVELOPMENT OF A ROBOTIC ARM</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Project</a></li>
-                
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <span class="current-page">GALLERY</span>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="project.html">PROJECT</a>
+                <a href="gallery.html" class="active">GALLERY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <section>
-            <h2>GALLERY</h2>
-            
+    <!-- Main Content -->
+    <main>
+        <div class="gallery-content">
+            <h1>GALLERY</h1>
+            <p class="subtitle">A collection of images and videos showcasing the development of the robotic arm.</p>
 
-            
-            <h3></h3>
+            <!-- Gallery Section -->
             <div class="gallery">
-                <div class="gallery-item">
-                    <img src="images/gripper_1.jpg" alt="Gripper parts straight outta FlashForge AD5M">
-                    <p class="caption">Gripper parts straight outta FlashForge AD5M.</p>
+                <!-- Image 1 -->
+                <div class="gallery-item video-container">
+                    <img src="https://i.ibb.co/c5jhNjH/gripper-1.jpg" alt="Gripper parts straight outta FlashForge AD5M">
+                    <p class="caption"></p>
                 </div>
-            
-                
+
+                <!-- Video 1 -->
                 <div class="gallery-item video-container">
                     <iframe src="https://player.vimeo.com/video/1059162063?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="gripper_test_1"></iframe>
-                    <p class="caption">Gripper Test 1</p>
+                    <p class="caption"></p>
                 </div>
-            
-               
+
+                <!-- Video 2 -->
                 <div class="gallery-item video-container">
                     <iframe src="https://player.vimeo.com/video/1059162277?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="arm_parts1"></iframe>
-                    <p class="caption">Arm Parts 1</p>
+                    <p class="caption"></p>
                 </div>
 
-
+                <!-- Video 3 -->
                 <div class="gallery-item video-container">
                     <iframe src="https://player.vimeo.com/video/1059330923?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" allowfullscreen title="arm_test1"></iframe>
-                    <p class="caption">Arm Parts 1</p>
+                    <p class="caption"></p>
                 </div>
-
-
-
             </div>
-
-            
         </div>
-
-           
-        </section>
     </main>
 
-
-    
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 - George Velentzas</p>
+        <div class="footer-content">
+            <p>THE NOOB'S GUIDE TO A ROBOTIC ARM - Yorgos Velentzas</p>
+            <br>
+            <p>© 2025</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/veleouist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/obeytheghostmaster/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/yorgos-velentzas" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/veleouist" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
+</html>
